@@ -9,13 +9,13 @@ pipeline {
                 }
             }
             steps {
-                sh 'sudo mvn clean package -DskipTests'
+                sh 'mvn clean package -DskipTests'
             }
         }
         stage('Build Image') {
             steps {
                 script {
-                	app = sudo docker.build("olatundji/testSet-docker")
+                	app = docker.build("olatundji/testSet-docker")
                 }
             }
         }
