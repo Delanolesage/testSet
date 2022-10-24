@@ -1,1 +1,4 @@
-'.idea/' 
+.idea/
+test-report/
+target/
+TestSet.iml
