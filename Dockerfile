@@ -1,4 +1,4 @@
-FROM openjdk:8u191-jre-alpine3.8
+FROM adoptopenjdk/openjdk11:jre-11.0.16.1_1-alpine
 
 RUN apk add curl jq
 
