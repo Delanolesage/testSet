@@ -18,10 +18,10 @@ ADD target/libs							libs
 ADD suite.xml					suite.xml
 
 # ADD health check script
-ADD healthcheck.sh                      healthcheck.sh
+ADD hubCheck.sh                      hubCheck.sh
 
 # BROWSER
 # HUB_HOST
 # MODULE
 
-ENTRYPOINT sh healthcheck.sh
+ENTRYPOINT sh hubCheck.sh
