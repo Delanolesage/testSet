@@ -9,6 +9,7 @@ pipeline {
                 }
             }
             steps {
+                sh 'java --version'
                 sh 'mvn clean package -DskipTests'
             }
         }
