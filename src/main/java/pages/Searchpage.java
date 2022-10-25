@@ -4,12 +4,11 @@ import eu.tsystems.mms.tic.testframework.pageobjects.Page;
 import eu.tsystems.mms.tic.testframework.pageobjects.UiElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Searchpage extends Page {
 
     //private final WebDriver driver = WebDriverManager.getWebDriver();;
-    private WebDriverWait wait;
+    //private WebDriverWait wait;
 
     //private final GuiElement searchTxt = new GuiElement(this.getWebDriver(), By.name("q"));
 
@@ -46,7 +45,7 @@ public class Searchpage extends Page {
     }
 
     public int getResult(){
-        //List<UiElement> allVideos = videos.getList();
+        //List<GuiElement> allVideos = videos.getList();
         System.out.println("Search Result : " + this.allVideos.list().size());
         return allVideos.list().size();
     }
