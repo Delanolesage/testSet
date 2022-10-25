@@ -1,5 +1,5 @@
 package testSetup;
-
+/*
 import cucumber.api.java.Before;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -55,5 +55,6 @@ public class TestSetup {
         String completeUrl = "http://" + host + ":4444/wd/hub";
         this.driver = new RemoteWebDriver(new URL(completeUrl), dc);
     }
-    */
+    *
 }
+*/
