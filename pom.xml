@@ -80,11 +80,7 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.7.0</version>
                 <configuration>
-                    <compilerVersion>11</compilerVersion>
-                    <source>11</source>
-                    <target>11</target>
-                    <testSource>11</testSource>
-                    <testTarget>11</testTarget>
+                    <release>11</release>
                 </configuration>
             </plugin>
 
@@ -111,6 +107,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M5</version>
                 <configuration>
+                    <argLine>--illegal-access=permit</argLine>
                     <skip>true</skip>
                     <testFailureIgnore>true</testFailureIgnore>
                 </configuration>
