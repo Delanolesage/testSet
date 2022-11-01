@@ -16,7 +16,7 @@ ADD target/resources            resources
 # please ADD that as well
 
 # ADD suite files
-ADD suite.xml					suite.xml
+ADD target/resources/suite.xml					suite.xml
 
 # ADD health check script
 ADD hubCheck.sh                      hubCheck.sh
