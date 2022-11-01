@@ -13,7 +13,6 @@ done
 
 # start the java command
 java -cp testSet.jar:testSet-tests.jar:libs/* \
-    -DHUB_HOST=$HUB_HOST \
-    -DBROWSER=$BROWSER \
-    -Dcucumber.options="$CUCUMBER_OPTIONS" \
+    -Dcucumber.features="$CUCUMBER_OPTIONS" \
+    -Dtt.system.settings.file="$FILE" \
     org.testng.TestNG -testclass com.runner.TestRunner
