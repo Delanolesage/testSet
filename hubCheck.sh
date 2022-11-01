@@ -13,6 +13,6 @@ done
 
 # start the java command
 java -cp testSet.jar:testSet-tests.jar:libs/* \
-    -Dcucumber.features="$CUCUMBER_OPTIONS" \
+    -Dcucumber.features="$CUCUMBER_FEATURES" \
     -Dtt.system.settings.file="$FILE" \
     org.testng.TestNG -testclass com.runner.TestRunner
