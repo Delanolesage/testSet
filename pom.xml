@@ -127,7 +127,7 @@
                             <outputDirectory>${project.build.directory}/resources</outputDirectory>
                             <resources>
                                 <resource>
-                                    <directory>src/test/resources</directory>
+                                    <directory>${project.build.testSourceDirectory}src/test/resources</directory>
                                 </resource>
                             </resources>
                         </configuration>
