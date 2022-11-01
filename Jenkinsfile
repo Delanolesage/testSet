@@ -4,12 +4,12 @@ pipeline {
         stage('Build Jar') {
             agent {
                 docker {
-                    image 'maven:3-alpine'
+                    image 'adoptopenjdk/maven-openjdk11:latest'
                     args '-v /home/admin_test/maven/.m2:/root/.m2'
                 }
             }
             steps {
-                sh 'mvn -X clean package -DskipTests'
+                sh 'mvn clean package -DskipTests'
             }
         }
         stage('Build Image') {
