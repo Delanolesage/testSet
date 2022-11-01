@@ -15,7 +15,7 @@ pipeline {
         stage('Build Image') {
             steps {
                 script {
-                	app = docker.build("olatundji/testSet-docker")
+                	app = docker.build("olatundji/testset-docker")
                 }
             }
         }
