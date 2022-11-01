@@ -9,7 +9,8 @@ WORKDIR /usr/share/test-automation
 # into this image
 ADD target/testSet.jar 			testSet.jar
 ADD target/testSet-tests.jar 	testSet-tests.jar
-ADD target/libs							libs
+ADD target/libs					libs
+ADD target/resources            resources
 
 # in case of any other dependency like .csv / .json / .xls
 # please ADD that as well

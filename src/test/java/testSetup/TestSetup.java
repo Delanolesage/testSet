@@ -1,26 +1,42 @@
 package testSetup;
-/*
-import cucumber.api.java.Before;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
+
+import eu.tsystems.mms.tic.testframework.constants.Browsers;
+import eu.tsystems.mms.tic.testframework.testing.TesterraTest;
+import eu.tsystems.mms.tic.testframework.testing.WebDriverManagerProvider;
+import eu.tsystems.mms.tic.testframework.useragents.ChromeConfig;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.BeforeSuite;
 
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.Properties;
+public class TestSetup extends TesterraTest implements WebDriverManagerProvider {
 
-import static eu.tsystems.mms.tic.testframework.common.PropertyManager.loadProperties;
+    /*
+    @BeforeSuite
+    public void setupBrowser() throws MalformedURLException {
+        DesktopWebDriverRequest request = new DesktopWebDriverRequest();
+        request.setBaseUrl("https://duckduckgo.com/");
+        request.setBrowser(Browsers.chrome);
+        WebDriver driver = WEB_DRIVER_MANAGER.getWebDriver(request);
+    }*/
+    @BeforeSuite
+    public void configureChromeOptions() {
+        WEB_DRIVER_MANAGER.setUserAgentConfig(Browsers.chromeHeadless, new ChromeConfig() {
+            @Override
+            public void configure(ChromeOptions options) {
+                options.addArguments("--disable-dev-shm-usage");
+            }
+        });
+    }
 
-public class TestSetup {
 
-
+    /*
     @BeforeSuite
     private Properties checkProperties(String env) {
+
         switch (env) {
             case "staging":
                 System.out.println("Staging properties loaded.");
                 return loadProperties("test_" + env + ".properties");
-            case "fmb":
+            case "null":
                 System.out.println("FMb properties loaded.");
                 return loadProperties("test_" + env + ".properties");
             case "fmc":
@@ -31,11 +47,24 @@ public class TestSetup {
         }
 
         return null;
-    }
+    }*/
 
     /*
-    @Before
-    public void setupDriver() throws MalformedURLException {
+    @Override
+    public boolean loadProperties(String resourceFile) {
+        return false;
+    }*/
+
+
+    /*
+    @BeforeMethod
+    public void setupDriver() {
+        PROPERTY_MANAGER.loadProperties("test.properties");
+        DesktopWebDriverRequest request = new DesktopWebDriverRequest();
+        request.setBrowser(Browsers.chrome);
+        request.setShutdownAfterTest(false);
+        WebDriver driver = WEB_DRIVER_MANAGER.getWebDriver(request);
+        /*
         // BROWSER => chrome / firefox
         // HUB_HOST => localhost / 10.0.1.3 / hostname
         String host = "localhost";
@@ -54,7 +83,7 @@ public class TestSetup {
 
         String completeUrl = "http://" + host + ":4444/wd/hub";
         this.driver = new RemoteWebDriver(new URL(completeUrl), dc);
-    }
-    *
+
+    }*/
+
 }
-*/

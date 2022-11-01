@@ -18,13 +18,13 @@ public class Searchpage extends Page {
 
     //private final GuiElement videos = new GuiElement(this.getWebDriver(), By.className("tile--vid"));
 
-    private UiElement searchTxt = find(By.name("q"));
+    private final UiElement searchTxt = find(By.name("q"));
 
-    private UiElement searchBtn = find(By.id("search_button_homepage"));
+    private final UiElement searchBtn = find(By.id("search_button_homepage"));
 
-    private UiElement videosLink = find(By.linkText("Videos"));
+    private final UiElement videosLink = find(By.linkText("Videos"));
 
-    private UiElement allVideos = find(By.className("tile--vid"));
+    private final UiElement allVideos = find(By.className("tile--vid"));
 
 
     public Searchpage(WebDriver driver) {
