@@ -14,7 +14,7 @@ done
 # list all files
 ls -la
 
-cd /resources
+cd resources/
 
 # list all files
 ls -la
