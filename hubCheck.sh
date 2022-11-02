@@ -6,7 +6,7 @@
 
 echo "Checking if hub is ready - $HUB_HOST"
 
-while [ "$( curl -s http://$HUB_HOST:4444/wd/hub/status | jq -r .value.ready )" != "true" ]
+while [ "$( curl -s http://localhost:4444/wd/hub/status | jq -r .value.ready )" != "true" ]
 do
 	sleep 1
 done
@@ -15,4 +15,4 @@ done
 java -cp testSet.jar:testSet-tests.jar:libs/* \
     -Dcucumber.features="$CUCUMBER_FEATURES" \
     -Dtt.system.settings.file="$FILE" \
-    org.testng.TestNG -testclass com.runner.TestRunner
+    org.testng.TestNG -testclass runner.TestRunner
