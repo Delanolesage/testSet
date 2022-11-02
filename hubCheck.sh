@@ -14,6 +14,7 @@ done
 # list all files
 ls -la
 
+java -version
 #cd resources/
 
 # list all files
