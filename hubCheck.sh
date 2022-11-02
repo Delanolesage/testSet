@@ -14,6 +14,14 @@ done
 # list all files
 ls -la
 
+cd /resources
+
+# list all files
+ls -la
+
+# list all files
+cd ..
+
 # start the java command
 java -cp testSet.jar:testSet-tests.jar:libs/* \
     -DHUB_HOST=$HUB_HOST
