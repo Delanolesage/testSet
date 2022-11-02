@@ -11,6 +11,9 @@ do
 	sleep 1
 done
 
+# list all files
+ls -la
+
 # start the java command
 java -cp testSet.jar:testSet-tests.jar:libs/* \
     -DHUB_HOST=$HUB_HOST
