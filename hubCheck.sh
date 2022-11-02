@@ -25,6 +25,6 @@ cd ..
 # start the java command
 java -cp testSet.jar:testSet-tests.jar:libs/* \
     -DHUB_HOST=$HUB_HOST
-    -Dcucumber.features="$CUCUMBER_FEATURES" \
+    #-Dcucumber.features="$CUCUMBER_FEATURES" \
     -Dtt.system.settings.file="$FILE" \
     org.testng.TestNG -testclass runner.TestRunner
