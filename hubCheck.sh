@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # Environment Variables
 # HUB_HOST
-# BROWSER
-# MODULE
+# CUCUMBER_FEATURES: Path
+# FILE: Property file
 
 echo "Checking if hub is ready - $HUB_HOST"
 
@@ -11,19 +11,7 @@ do
 	sleep 1
 done
 
-# list all files
-ls -la
-
-java -version
-#cd resources/
-
-# list all files
-#ls -la
-
-# list all files
-#cd ..
-
-# start the java command
+# start the java command for running the test from jar files
 java -cp testSet.jar:testSet-tests.jar:libs/* -Dcucumber.features="$CUCUMBER_FEATURES" -Dtt.system.settings.file="$FILE" org.testng.TestNG -testclass runner.TestRunner
     #-DHUB_HOST=$HUB_HOST
     #-Dcucumber.features="$CUCUMBER_FEATURES" \
