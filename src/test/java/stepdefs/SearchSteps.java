@@ -11,11 +11,11 @@ import org.testng.annotations.Test;
 import pages.Searchpage;
 import testSetup.TestSetup;
 
-public class searchSteps extends TestSetup implements WebDriverManagerProvider, PageFactoryProvider {
+public class SearchSteps extends TestSetup implements WebDriverManagerProvider, PageFactoryProvider {
 //public class searchSteps extends TesterraTest implements WebDriverManagerProvider, PageFactoryProvider {
 
     @Test
-    @Given("^I am on the website duck-duck-go$")
+    @Given("^I am on the website$")
     public void launchSite() {
         WebDriver driver = WEB_DRIVER_MANAGER.getWebDriver();
         Searchpage searchPage = PAGE_FACTORY.createPage(Searchpage.class);
