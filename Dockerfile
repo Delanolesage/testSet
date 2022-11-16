@@ -14,7 +14,7 @@ ADD target/resources/features   features
 ADD target/resources/test.properties   test.properties
 
 # in case of any other dependency like .csv / .json / .xls
-# please ADD that as well
+# they can be added here
 
 # ADD suite files
 #ADD target/resources/suite.xml					suite.xml

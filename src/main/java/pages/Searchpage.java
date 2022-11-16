@@ -21,19 +21,34 @@ public class Searchpage extends Page {
         super(driver);
     }
 
+    /**
+     * No need to give the url here.
+     * it is already set in the test.porperties
+     */
     public void goTo(){
         //this.driver.get("https://duckduckgo.com/");
     }
 
+    /**
+     * This function enters the keyword to be searched and submit the search
+     * @param keyword to be searched
+     */
     public void doSearch(String keyword){
         searchTxt.type(keyword);
         searchBtn.click();
     }
 
+    /**
+     * This function goes to the video section of the website
+     */
     public void goToVideos(){
         this.videosLink.click();
     }
 
+    /**
+     * This function prints and returns the number of videos found on the result page
+     * @return: the numbers of videos on the page
+     */
     public int getResult(){
         //List<GuiElement> allVideos = videos.getList();
         System.out.println("Search Result : " + this.allVideos.list().size());

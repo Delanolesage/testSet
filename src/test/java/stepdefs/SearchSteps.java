@@ -11,6 +11,10 @@ import org.testng.annotations.Test;
 import pages.Searchpage;
 import testSetup.TestSetup;
 
+/**
+ * This is our Steps definition class
+ * It is linked to our Feature file steps through the annotations
+ */
 public class SearchSteps extends TestSetup implements WebDriverManagerProvider, PageFactoryProvider {
 //public class searchSteps extends TesterraTest implements WebDriverManagerProvider, PageFactoryProvider {
 

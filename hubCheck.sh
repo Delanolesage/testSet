@@ -13,7 +13,3 @@ done
 
 # start the java command for running the test from jar files
 java -cp testSet.jar:testSet-tests.jar:libs/* -Dcucumber.features="$CUCUMBER_FEATURES" -Dtt.system.settings.file="$FILE" org.testng.TestNG -testclass runner.TestRunner
-    #-DHUB_HOST=$HUB_HOST
-    #-Dcucumber.features="$CUCUMBER_FEATURES" \
-    #-Dtt.system.settings.file="$FILE" \
-    #org.testng.TestNG -testclass runner.TestRunner
