@@ -7,16 +7,6 @@ import org.openqa.selenium.WebDriver;
 
 public class Searchpage extends Page {
 
-    //private final WebDriver driver = WebDriverManager.getWebDriver();;
-    //private WebDriverWait wait;
-
-    //private final GuiElement searchTxt = new GuiElement(this.getWebDriver(), By.name("q"));
-
-    //private final GuiElement searchBtn = new GuiElement(this.getWebDriver(), By.id("search_button_homepage"));
-
-    //private final GuiElement videosLink = new GuiElement(this.getWebDriver(), By.linkText("Videos"));
-
-    //private final GuiElement videos = new GuiElement(this.getWebDriver(), By.className("tile--vid"));
 
     private final UiElement searchTxt = find(By.name("q"));
 
